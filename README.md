@@ -12,7 +12,7 @@ This repository contains two main collections:
 
 ## Getting Started
 
-Before utilizing these collections, ensure Postman is installed on your machine. Follow these steps to set up:
+Before utilising these collections, ensure Postman is installed on your machine. Follow these steps to set up:
 
 1. **Import Collections**: Download the `Workflows Collection` JSON file. In Postman, navigate to `Import` > `File` > `Upload Files` and select the file.
 
@@ -56,7 +56,7 @@ Given the sensitive nature of the information and operations within this reposit
 
 ## License
 
-The contents of this repository are provided under a private license. Unauthorized distribution, sharing, or copying of any content without explicit permission is strictly prohibited.
+The contents of this repository are provided under a private license. Unauthorised distribution, sharing, or copying of any content without explicit permission is strictly prohibited.
 
 ## Support
 
