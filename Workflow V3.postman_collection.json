@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "71d09d13-6c07-4362-a56e-8d9cf062e206",
+		"name": "Workflow V3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30708145",
+		"_collection_link": "https://intouch-io.postman.co/workspace/InTouch-Library-Services~fa283ef9-a336-4391-b1e5-ebebaf028cc8/collection/30708145-71d09d13-6c07-4362-a56e-8d9cf062e206?action=share&source=collection_link&creator=30708145"
+	},
+	"item": [
+		{
+			"name": "Workflow Initiation",
+			"item": [
+				{
+					"name": "Initiate Gold KYC Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"Bank\",\n        \"value\": \"Nedbank\"\n    },\n    {\n        \"name\": \"BankAccountType\",\n        \"value\": \"Current\"\n    },\n    {\n        \"name\": \"BankAccountNumber\",\n        \"value\": \"1081444304\"\n    },\n    {\n        \"name\": \"BankBranchCode\",\n        \"value\": \"198765\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"MainRecordID\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ExternalReference\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"VendorID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"CostCentreID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=ea5cf494-3caa-42ed-bf3e-fcbc80501af2&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "ea5cf494-3caa-42ed-bf3e-fcbc80501af2"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Credit Check (Non-CPA) Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christopher Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"Gender\",\n        \"value\": \"male\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"EnquirerName\",\n        \"value\": \"Karl\"\n    },\n    {\n        \"name\": \"EnquirerContact\",\n        \"value\": \"895623147\"\n    },\n    {\n        \"name\": \"EnquirerEmailAddress\",\n        \"value\": \"test@gmail.com\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=47d843d3-72f0-4d96-ae83-c19e0f99d58c&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "47d843d3-72f0-4d96-ae83-c19e0f99d58c"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Consumer Trace Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=337944e4-1a9c-4c02-a9af-05badb381cfd&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "337944e4-1a9c-4c02-a9af-05badb381cfd"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate SA Bank Account Validation Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christopher Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"MainRecordID\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ExternalReference\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"VendorID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"CostCentreID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"Bank\",\n        \"value\": \"Nedbank\"\n    },\n    {\n        \"name\": \"BankAccountType\",\n        \"value\": \"Current\"\n    },\n    {\n        \"name\": \"BankAccountNumber\",\n        \"value\": \"1081444304\"\n    },\n    {\n        \"name\": \"BankBranchCode\",\n        \"value\": \"198765\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=582334b0-fb4e-46f0-8842-fe1d6818ab76&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "582334b0-fb4e-46f0-8842-fe1d6818ab76"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Eagle Eye Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"EnquiryReason\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christopher Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=3f5bee2d-5c25-434e-a0b0-30855f799eaf&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "3f5bee2d-5c25-434e-a0b0-30855f799eaf"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Silver KYC Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=46ead40d-8bbc-4491-8ada-6e91c251de0c&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "46ead40d-8bbc-4491-8ada-6e91c251de0c"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Basic KYC Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=585b68cc-d4c8-4476-ab30-33beb587774e&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "585b68cc-d4c8-4476-ab30-33beb587774e"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Individual KYC Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christoper Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=64eeb01d-a9bb-46ad-861f-1551eef45984&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "64eeb01d-a9bb-46ad-861f-1551eef45984"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Direct Screening Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"FirstAndLastName\",\n        \"value\": \"Karl Nimmo\"\n    },\n    {\n        \"name\": \"FullName\",\n        \"value\": \"Karl Christopher Lennox Nimmo\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=e9096f04-2476-435c-b638-64f7122fd448&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "e9096f04-2476-435c-b638-64f7122fd448"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate DHA Workflow V3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{injection_url}}?workflowId=bcd425e5-345c-4e98-9638-14afffe541f2&organisationPhaseTwoId={{org_phase_two_id}}",
+							"host": [
+								"{{injection_url}}"
+							],
+							"query": [
+								{
+									"key": "workflowId",
+									"value": "bcd425e5-345c-4e98-9638-14afffe541f2"
+								},
+								{
+									"key": "organisationPhaseTwoId",
+									"value": "{{org_phase_two_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorisation",
+			"item": [
+				{
+					"name": "Get Organisation Phase Two ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{identity_url}}/inTouchOrganisation/organisationPhaseTwoId",
+							"host": [
+								"{{identity_url}}"
+							],
+							"path": [
+								"inTouchOrganisation",
+								"organisationPhaseTwoId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Authorisation Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{auth_url}}/token",
+							"host": [
+								"{{auth_url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Workflow Run Status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"uuid": "1c3ae2db-019f-4675-a903-dac0d85765c4"
+					}
+				],
+				"url": {
+					"raw": "{{core_url}}/status/{{tracking_id}}",
+					"host": [
+						"{{core_url}}"
+					],
+					"path": [
+						"status",
+						"{{tracking_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
