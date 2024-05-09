@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "71d09d13-6c07-4362-a56e-8d9cf062e206",
 		"name": "Workflow V3",
+		"description": "### Workflow Initiation and Tracking\n\n- **Initiation Calls**: Using your Organisation ID, you can initiate any workflow process. These calls generate a `Tracking ID`, which is essential for monitoring the workflow's progress.\n- **Status Checks**: By inputting the `Tracking ID` as a path variable in the status call, you can obtain real-time updates on the workflow. This includes results for each step as they are completed.\n- **Handling Encoded Data**: If a call returns encoded data, the workflow will decode this data and upload the corresponding document or image to a private S3 bucket. You'll receive a document or image URL in your results, equipped with a secure, pre-signed link for access. Note that these links expire after 24 hours for security purposes.\n    \n\n### Environment Variables Collection\n\nThis collection includes crucial configurations, such as:\n\n- **Base URLs**: URLs for authentication, identity services, core services, and workflow initiation.\n- **Authentication Token**: Placeholder for the Bearer token necessary for authenticated calls.\n- **Organisation Phase Two ID**: Identifier used in initiating workflows.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30708145",
 		"_collection_link": "https://intouch-io.postman.co/workspace/InTouch-Library-Services~fa283ef9-a336-4391-b1e5-ebebaf028cc8/collection/30708145-71d09d13-6c07-4362-a56e-8d9cf062e206?action=share&source=collection_link&creator=30708145"
@@ -17,7 +18,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"Bank\",\n        \"value\": \"Nedbank\"\n    },\n    {\n        \"name\": \"BankAccountType\",\n        \"value\": \"Current\"\n    },\n    {\n        \"name\": \"BankAccountNumber\",\n        \"value\": \"1081444304\"\n    },\n    {\n        \"name\": \"BankBranchCode\",\n        \"value\": \"198765\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"MainRecordID\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ExternalReference\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"VendorID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"CostCentreID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Bank\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"BankAccountType\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"BankAccountNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"BankBranchCode\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"MainRecordID\",\n        \"value\": \"\" // Can be left blank\n    },\n    {\n        \"name\": \"ExternalReference\",\n        \"value\": \"\" // Can be left blank\n    },\n    {\n        \"name\": \"VendorID\",\n        \"value\": null // Can be left null\n    },\n    {\n        \"name\": \"CostCentreID\",\n        \"value\": null //Can be left null\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\" // Can be defaulted to \"Test\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,7 +40,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the following calls in a workflow, including the requisite authorisation calls for each:\n\n- DHA: SA Home Affairs ID Number Verification\n- Individual KYC\n- Direct Screening\n- SA Bank Account Validation"
 					},
 					"response": []
 				},
@@ -50,7 +52,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christopher Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"Gender\",\n        \"value\": \"male\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"EnquirerName\",\n        \"value\": \"Karl\"\n    },\n    {\n        \"name\": \"EnquirerContact\",\n        \"value\": \"895623147\"\n    },\n    {\n        \"name\": \"EnquirerEmailAddress\",\n        \"value\": \"test@gmail.com\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Gender\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\" // Can be defaulted to \"Test\"\n    },\n    {\n        \"name\": \"EnquirerName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"EnquirerContact\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"EnquirerEmailAddress\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -72,7 +74,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to perform a non-CPA credit check"
 					},
 					"response": []
 				},
@@ -83,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -105,7 +108,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to track a consumer’s credit history"
 					},
 					"response": []
 				},
@@ -116,7 +120,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christopher Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"MainRecordID\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ExternalReference\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"VendorID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"CostCentreID\",\n        \"value\": null\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"Bank\",\n        \"value\": \"Nedbank\"\n    },\n    {\n        \"name\": \"BankAccountType\",\n        \"value\": \"Current\"\n    },\n    {\n        \"name\": \"BankAccountNumber\",\n        \"value\": \"1081444304\"\n    },\n    {\n        \"name\": \"BankBranchCode\",\n        \"value\": \"198765\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"MainRecordID\",\n        \"value\": \"\" // Can be left blank\n    },\n    {\n        \"name\": \"ExternalReference\",\n        \"value\": \"\" // Can be left blank\n    },\n    {\n        \"name\": \"VendorID\",\n        \"value\": null // Can be left null\n    },\n    {\n        \"name\": \"CostCentreID\",\n        \"value\": null //Can be left null\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"Bank\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"BankAccountType\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"BankAccountNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"BankBranchCode\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -138,7 +142,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to validate if an account number is linked to an ID number, and if it accepts debits and credits"
 					},
 					"response": []
 				},
@@ -149,7 +154,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"EnquiryReason\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christopher Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"EnquiryReason\",\n        \"value\": \"\" // Can be left blank\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\" // Can be left blank\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -171,7 +176,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to perform an Eagle Eye pre-assessment credit enquiry\n"
 					},
 					"response": []
 				},
@@ -182,7 +188,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CheckID\",\n        \"value\": \"AVS\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\" // Can be defaulted to \"Test\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -204,7 +210,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the following calls in a workflow, including the requisite authorisation calls for each:\n\n- DHA: SA Home Affairs ID Number Verification\n- Individual KYC\n- Direct Screening"
 					},
 					"response": []
 				},
@@ -215,7 +222,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\" // Can be defaulted to \"Test\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -237,7 +244,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the following calls in a workflow, including the requisite authorisation calls for each:\n\n- DHA: SA Home Affairs ID Number Verification\n- Individual KYC"
 					},
 					"response": []
 				},
@@ -248,7 +256,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"Karl Christoper Lennox\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"Nimmo\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"34\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"Cecil Avenue\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Johannesburg\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"2196\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"Gauteng\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"South Africa\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"Melrose\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"Test\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"FirstName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"LastName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"AddressLine1\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"AddressLine2\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Suburb\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"PostalCode\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Province\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Country\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"City\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Reference\",\n        \"value\": \"\" // Can be defaulted to \"Test\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -270,7 +278,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to provide an individual KYC with a pdf"
 					},
 					"response": []
 				},
@@ -281,7 +290,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"FirstAndLastName\",\n        \"value\": \"Karl Nimmo\"\n    },\n    {\n        \"name\": \"FullName\",\n        \"value\": \"Karl Christopher Lennox Nimmo\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"FirstAndLastName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"FullName\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"Scope\",\n        \"value\": \"Default\"\n    },\n    {\n        \"name\": \"Categories\",\n        \"value\": \"Watchlists,PEP,Crimelists,Sanctions\"\n    },\n    {\n        \"name\": \"Vendor\",\n        \"value\": \"SEON\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -303,7 +312,8 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to identify sanctioned or high-risk entities on watch lists or Politically Exposed Persons (PEP)"
 					},
 					"response": []
 				},
@@ -314,7 +324,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"9103085067083\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"ZAF\"\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
+							"raw": "[\n    {\n        \"name\": \"IDNumber\",\n        \"value\": \"\"\n    },\n    {\n        \"name\": \"CountryCode\",\n        \"value\": \"\" // South Africa is ZAF\n    },\n    {\n        \"name\": \"ResultType\",\n        \"value\": \"2\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -336,11 +346,13 @@
 									"value": "{{org_phase_two_id}}"
 								}
 							]
-						}
+						},
+						"description": "Runs the necessary calls to verify an individual's ID number, title, gender, name, surname, date of birth, physical address, and status through the Department of Home Affairs and provide a photo of the individual"
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Requests to start workflow runs. Required default values are pre-filled in. Where default data can be used otherwise, comments are provided to show default values that can be used.\n\nReturns the workflow ID and a tracking ID to be used in Get Status."
 		},
 		{
 			"name": "Authorisation",
@@ -413,31 +425,38 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Requests to retrieve data related to an organisation's InTouch identity.\n\n1. Get Authorisation used an organisation's Client ID and Secret and retrieves an authorisation token for the collection.\n    \n2. Once the token has been retrieved and added to the environment variables, Get Organisation Phase Two ID can be run to retrieve the organisation's ID used to run the workflows."
 		},
 		{
-			"name": "Get Workflow Run Status",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "",
-						"value": "",
-						"uuid": "1c3ae2db-019f-4675-a903-dac0d85765c4"
-					}
-				],
-				"url": {
-					"raw": "{{core_url}}/status/{{tracking_id}}",
-					"host": [
-						"{{core_url}}"
-					],
-					"path": [
-						"status",
-						"{{tracking_id}}"
-					]
+			"name": "Workflow Run Status",
+			"item": [
+				{
+					"name": "Get Workflow Run Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"uuid": "1c3ae2db-019f-4675-a903-dac0d85765c4"
+							}
+						],
+						"url": {
+							"raw": "{{core_url}}/status/{{tracking_id}}",
+							"host": [
+								"{{core_url}}"
+							],
+							"path": [
+								"status",
+								"{{tracking_id}}"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"description": "Contains the Get Status call that retrieves information about a workflow's run when given a tracking ID."
 		}
 	],
 	"auth": {
